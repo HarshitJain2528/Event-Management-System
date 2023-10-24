@@ -21,10 +21,13 @@
 	<head>
 		<title>Payment- EventSpectra</title>
 		<link rel="stylesheet" href="css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	</head>
 	<body>
+		<!-- header starts here-->
 		<?php include("common/header.php"); ?>
-
+		<!-- header ends here-->
+		<!-- total amount container starts here-->
 		<div class="totalamount">
 			<h2>Total Amount</h2>
 			<div class="totalamount-details">
@@ -56,7 +59,9 @@
 				?>
 			</div>
 		</div>
-		
+		<!-- total amount container ends here-->
+		<!-- footer starts here-->
 		<?php include("common/footer.php"); ?>
+		<!-- footer ends here-->
 	</body>
 </html>

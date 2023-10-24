@@ -1,6 +1,7 @@
 <?php	session_start();
 	include('vendor/autoload.php');
 	include('common/connection.php');
+	//Regular Login
 	if(!empty($_POST['login']))
 	{
 		$username=$_POST['username'];
@@ -22,8 +23,7 @@
 	{
 		session_destroy();
 	}
-	include('vendor/autoload.php');
-	// init configuration
+	//google configuration
 	$clientID = '618853684118-0eph083ro3b26gi91uagjrc4ouo1e3mn.apps.googleusercontent.com';
 	$clientSecret = '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';
 	$redirectUri = 'http://localhost/event_management/events.php';
@@ -38,7 +38,7 @@
 
 	// authenticate code from Google OAuth Flow
 	
-	
+	//faceboook authentication
 	$fb = new Facebook\Facebook([
 	  'app_id' => '6958646657480028',
 	  'app_secret' => '83f4a9d533081498b7043c61aa10b286',
@@ -53,6 +53,7 @@
 	<head>
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	</head>
 	<body>
 		<?php
@@ -71,8 +72,6 @@
 					</div>
 					<a><input type="submit" class="login-button" value="Login" name="login"/></a><br><br>
 					<p>New user? <a href="signup.php">Sign up first!</a></p><br>
-					<!-- login options start here -->
-					<!-- login options end here -->
 				
 					<div class="login-opts">
 						<!-- login option start here -->
@@ -88,8 +87,10 @@
 			</div>
 		</div>
 		<!-- main container2 ends here -->
+		<!-- footer starts here-->
 		<?php
 			include("common/footer.php");
 		?>
+		<!-- footer ends here -->
 	</body>
 </html>
